@@ -1,0 +1,3 @@
+image:
+  repository: localhost:5001/jumptotech/auth-service
+  tag: "ccce70b"
