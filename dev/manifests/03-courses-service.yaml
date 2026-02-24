@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: courses-service
+  namespace: jumptotech-dev
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: courses-service
+  template:
+    metadata:
+      labels:
+        app: courses-service
+    spec:
+      containers:
+        - name: courses-service
+          image: local-registry:5000/jumptotech/courses-service:latest
+          ports:
+            - containerPort: 8000
+          env:
+            - name: DB_HOST
+              value: "postgres"
+            - name: DB_USER
+              value: "admin"
+            - name: DB_PASS
+              value: "admin123"
+            - name: DB_NAME
+              value: "jumptotech"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: courses-service
+  namespace: jumptotech-dev
+spec:
+  selector:
+    app: courses-service
+  ports:
+    - port: 8000
+      targetPort: 8000
