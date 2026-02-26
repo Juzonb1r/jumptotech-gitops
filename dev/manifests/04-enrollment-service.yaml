@@ -15,7 +15,8 @@ spec:
     spec:
       containers:
         - name: enrollment-service
-          image: local-registry:5000/jumptotech/enrollment-service:latest
+          image: juzonb1r/jumptotech-enrollment-service:a24d1db
+          imagePullPolicy: Always
           ports:
             - containerPort: 8000
 ---

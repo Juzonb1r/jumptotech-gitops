@@ -15,7 +15,8 @@ spec:
     spec:
       containers:
         - name: news-service
-          image: local-registry:5000/jumptotech/news-service:latest
+          image: juzonb1r/jumptotech-news-service:a24d1db
+          imagePullPolicy: Always
           ports:
             - containerPort: 8000
 ---

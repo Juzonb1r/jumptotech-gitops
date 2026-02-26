@@ -15,7 +15,8 @@ spec:
     spec:
       containers:
         - name: auth-service
-          image: local-registry:5000/jumptotech/auth-service:latest
+          image: juzonb1r/jumptotech-auth-service:a24d1db
+          imagePullPolicy: Always
           ports:
             - containerPort: 8000
 ---

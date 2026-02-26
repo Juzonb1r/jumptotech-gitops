@@ -15,7 +15,8 @@ spec:
     spec:
       containers:
         - name: gateway-service
-          image: local-registry:5000/jumptotech/gateway-service:latest
+          image: juzonb1r/jumptotech-gateway-service:a24d1db
+          imagePullPolicy: Always
           ports:
             - containerPort: 8000
 ---
