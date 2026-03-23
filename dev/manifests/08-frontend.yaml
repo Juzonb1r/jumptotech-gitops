@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: juzonb1r/jumptotech-frontend:052c98f
+          image: juzonb1r/jumptotech-frontend:f22f225
           ports:
             - containerPort: 3000
           env:
